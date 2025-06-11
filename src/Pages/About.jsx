@@ -1,24 +1,3 @@
-// import React from 'react'
-
-// function About() {
-//     return (
-//         <section id="about" className="about">
-//             <div className='container my-5'>
-//                 <h2>About Me</h2>
-//                 {/* <p>
-//                 I am a passionate MERN stack developer with a strong foundation in web development.
-//                 I specialize in building responsive and dynamic web applications using modern
-//                 technologies.
-//             </p> */}
-//                 <p>I am a skilled MERN stack developer with expertise in building modern web applications.</p>
-//             </div>
-//         </section>
-//     )
-// }
-
-// export default About
-
-//1
 import React from 'react';
 import myImg from '../assets/IMG_1551 copy copy--.jpg'
 
@@ -46,7 +25,8 @@ function About() {
                                 <CiLinkedin size={30} className="mx-2 text-blue" />
                             </a>
                             <a href='' download='resume'>
-                            <LuDownload size={20} className="mx-2 text-black" />
+                            <LuDownload size={20} className="mx-2 text-black
+                            " />
                             </a>
                         </div>
                     </div>
@@ -64,38 +44,3 @@ function About() {
 }
 
 export default About;
-
-
-//2
-// import React from 'react';
-
-// function About() {
-//     return (
-//         <section id="about" className="about">
-//             <div className='container'>
-//                 <div className="row align-items-center">
-//                     <div className="col-md-6">
-//                         <img
-//                             src="https://png.pngtree.com/png-clipart/20231109/original/pngtree-programmer-it-developer-png-image_13520483.png" // Add your image URL here
-//                             alt="Profile"
-//                             className="about-image img-fluid rounded-circle"
-//                         />
-//                     </div>
-//                     <div className="col-md-6">
-//                         <h2 className="section-title">About Me</h2>
-//                         <p className="about-text">
-//                             I am a skilled MERN stack developer with expertise in building modern web applications.
-//                             With experience in HTML, CSS, JavaScript, ReactJS, Node.js, MongoDB, and Express.js,
-//                             I am passionate about creating responsive and dynamic web applications.
-//                         </p>
-//                         <p className="about-text">
-//                             I believe in writing clean, maintainable code and delivering seamless user experiences.
-//                         </p>
-//                     </div>
-//                 </div>
-//             </div>
-//         </section>
-//     );
-// }
-
-// export default About;

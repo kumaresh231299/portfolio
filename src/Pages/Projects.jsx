@@ -47,6 +47,14 @@ function Projects() {
       desc: 'A full-stack application for streaming music built using MERN.',
       githubLink: 'https://github.com/kumaresh231299/music-streamming-sk-fe',
       demoLink: 'https://music-streamming-sk-fe.netlify.app/'
+    },
+    {
+      id: 2,
+      projectImg: just,
+      projectName: 'Blog Application',
+      desc: 'A full-stack application for Blog application built using MERN.',
+      githubLink: 'https://github.com/kumaresh231299/SK-Blogging_Application_FE',
+      demoLink: 'https://sk-blogging-application.netlify.app/'
     }
   ];
 
