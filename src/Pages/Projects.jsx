@@ -40,27 +40,27 @@ import just from '../assets/user3D_img.png';
 
 function Projects() {
   const data = [
-    {
+    { 
     id: 1,
     projectImg: just,
-    projectName: 'Password Reset App',
+    projectName: '🔐 Password Reset App',
     desc: 'A MERN-based user authentication system that supports secure login, password reset via email using Nodemailer, and JWT token verification.',
     githubLink: 'https://github.com/kumaresh231299/Password-Reset-FrontEnd',
     demoLink: 'https://password-reset-frontend-sk.netlify.app/'
   },{
       id: 2,
       projectImg: just,
-      projectName: 'Blog Application',
-      desc: 'A full-stack blogging platform built with the MERN stack. Users can register, log in, create, edit, and delete blog posts with JWT-based authentication.',
-      githubLink: 'https://github.com/kumaresh231299/SK-Blogging_Application_FE',
-      demoLink: 'https://sk-blogging-application.netlify.app/'
-    },{
-      id: 3,
-      projectImg: just,
-      projectName: 'Music Streaming App',
+      projectName: '🎵 Music Streaming App',
       desc: 'A full-stack MERN application that allows users to stream music, manage playlists, and browse trending tracks with a modern UI.',
       githubLink: 'https://github.com/kumaresh231299/music-streamming-sk-fe',
       demoLink: 'https://music-streamming-sk-fe.netlify.app/'
+    },{
+      id: 3,
+      projectImg: just,
+      projectName: '✍️ Blog Application',
+      desc: 'A full-stack blogging platform built with the MERN stack. Users can register, log in, create, edit, and delete blog posts with JWT-based authentication.',
+      githubLink: 'https://github.com/kumaresh231299/SK-Blogging_Application_FE',
+      demoLink: 'https://sk-blogging-application.netlify.app/'
     }
   ];
 
