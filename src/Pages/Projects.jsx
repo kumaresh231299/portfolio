@@ -1,106 +1,82 @@
-// import React from 'react'
-// import just from '../assets/user3D_img.png'
-
-// function Projects() {
-
-//   let data =[
-//     {
-//       id:1,
-//       projectImg:"",
-//       projectName:"Music Streaming App",
-//       desc:"A full-stack application for streaming music bulit using MERN."
-//     }
-//   ]
-
-//   return (
-//     <section id="projects" className="projects">
-//       <div className='container my-5'>
-//         <h2>My Projects</h2>
-//         {/* <ul>
-//         <li>Music Streamming App</li>
-//       </ul> */}
-//         {/* <p>Music Streamming App</p> */}
-//         <div className='card col-lg-4 col-md-5 col-sm-6 mb-4'>
-//           <img src={just} className='card-img-top' alt='Music Streamming App' height='250px' style={{width:"250px"}}/>
-//           <div className='card-body'>
-//             <h5 className='card-title'>Music Streaming App</h5>
-//             <p className='card-text'>A full-stack application for streaming music bulit using MERN.</p>
-//             <a href='https://github.com/kumaresh231299/music-streamming-sk-fe' className='btn btn-primary' target='_blank'>Github</a>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   )
-// }
-
-// export default Projects
-
 import React from 'react';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import just from '../assets/user3D_img.png';
 
 function Projects() {
   const data = [
-    { 
-    id: 1,
-    projectImg: just,
-    projectName: '🔐 Password Reset App',
-    desc: 'A MERN-based user authentication system that supports secure login, password reset via email using Nodemailer, and JWT token verification.',
-    githubLink: 'https://github.com/kumaresh231299/Password-Reset-FrontEnd',
-    demoLink: 'https://password-reset-frontend-sk.netlify.app/'
-  },{
+    {
+      id: 1,
+      projectImg: just,
+      projectName: '🔐 Password Reset App',
+      desc: 'A MERN-based user authentication system with secure login, password reset via email using Nodemailer, and JWT verification.',
+      githubLink: 'https://github.com/kumaresh231299/Password-Reset-FrontEnd',
+      demoLink: 'https://password-reset-frontend-sk.netlify.app/'
+    },
+    {
       id: 2,
       projectImg: just,
       projectName: '🎵 Music Streaming App',
-      desc: 'A full-stack MERN application that allows users to stream music, manage playlists, and browse trending tracks with a modern UI.',
+      desc: 'A full-stack MERN application for music streaming, playlist management, and browsing trending tracks with a modern user interface.',
       githubLink: 'https://github.com/kumaresh231299/music-streamming-sk-fe',
       demoLink: 'https://music-streamming-sk-fe.netlify.app/'
-    },{
+    },
+    {
       id: 3,
       projectImg: just,
       projectName: '✍️ Blog Application',
-      desc: 'A full-stack blogging platform built with the MERN stack. Users can register, log in, create, edit, and delete blog posts with JWT-based authentication.',
+      desc: 'A MERN blogging platform where users can register, log in, create, edit, and delete blog posts with JWT-based authentication.',
       githubLink: 'https://github.com/kumaresh231299/SK-Blogging_Application_FE',
       demoLink: 'https://sk-blogging-application.netlify.app/'
+    },
+    {
+      id: 4,
+      projectImg: just,
+      projectName: '🛡️ Military Asset Management System',
+      desc: 'A MERN-based role-based management system for tracking asset purchases, transfers, assignments, and usage across military bases.',
+      githubLink: 'https://github.com/kumaresh231299/Military-Asset-Management-System_FE',
+      demoLink: 'https://sk-military-asset-management-system.netlify.app/'
     }
   ];
 
   return (
-    <section id="projects" className="projects py-5 bg-light">
+    <section id="projects" className="py-5 bg-light">
       <div className="container">
         <h2 className="text-center mb-5 fw-bold">Projects</h2>
         <div className="row g-4">
           {data.map((project) => (
             <div key={project.id} className="col-lg-4 col-md-6 col-sm-12">
-              <div className="card h-100 shadow-sm">
+              <div className="card h-100 shadow-sm border-0 rounded-4 hover-shadow">
                 <img
                   src={project.projectImg}
-                  className="card-img-top"
+                  className="card-img-top p-3"
                   alt={project.projectName}
                   style={{
-                    height: '200px',
+                    height: '250px',
                     objectFit: 'contain',
-                    borderRadius: '5px 5px 0 0',
+                    borderRadius: '5px 5px 0 0'
                   }}
                 />
-                <div className="card-body d-flex flex-column justify-content-between">
-                  <h5 className="card-title">{project.projectName}</h5>
-                  <p className="card-text text-muted">{project.desc}</p>
-                  <div className='d-flex justify-content-between mx-2'>
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title fw-semibold">{project.projectName}</h5>
+                  <p className="card-text text-secondary flex-grow-1">{project.desc}</p>
+                  <div className="d-flex justify-content-between gap-2">
                     <a
                       href={project.githubLink}
-                      className="btn btn-primary mt-auto"
+                      className="btn btn-outline-dark w-50 d-flex align-items-center justify-content-center"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      View on GitHub
+                      <FaGithub className="me-2" />
+                      GitHub
                     </a>
                     <a
                       href={project.demoLink}
-                      className="btn btn-primary mt-auto"
+                      className="btn btn-primary w-50 d-flex align-items-center justify-content-center"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      View Live Demo
+                      <FaExternalLinkAlt className="me-2" />
+                      Live Demo
                     </a>
                   </div>
                 </div>
