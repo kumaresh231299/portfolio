@@ -15,10 +15,6 @@ function Home() {
           />
         </div>
         <h1 className="mt-3">Hi, I'm Kumaresan</h1>
-        {/* <p className="lead">
-          A passionate MERN Stack Developer ready to bulid amazing web
-          applications.
-        </p> */}
         <span>
           <Typewriter
           words={["A MERN Stack Developer","Ready to Bulid Amazing Apps"]}
