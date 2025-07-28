@@ -27,14 +27,6 @@ function Projects() {
       desc: 'A MERN blogging platform where users can register, log in, create, edit, and delete blog posts with JWT-based authentication.',
       githubLink: 'https://github.com/kumaresh231299/SK-Blogging_Application_FE',
       demoLink: 'https://sk-blogging-application.netlify.app/'
-    },
-    {
-      id: 4,
-      projectImg: just,
-      projectName: '🛡️ Military Asset Management System',
-      desc: 'A MERN-based role-based management system for tracking asset purchases, transfers, assignments, and usage across military bases.',
-      githubLink: 'https://github.com/kumaresh231299/Military-Asset-Management-System_FE',
-      demoLink: 'https://sk-military-asset-management-system.netlify.app/'
     }
   ];
 
