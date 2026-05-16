@@ -1,0 +1,89 @@
+<svg viewBox="0 0 360 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#064e3b"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+    <linearGradient id="card3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.13"/>
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.04"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="360" height="200" fill="url(#bg3)" rx="12"/>
+
+  <!-- Decorative blobs -->
+  <circle cx="320" cy="25" r="65" fill="#047857" opacity="0.2"/>
+  <circle cx="25" cy="185" r="50" fill="#065f46" opacity="0.25"/>
+
+  <!-- Blog list card (left) -->
+  <rect x="22" y="28" width="148" height="144" rx="10" fill="url(#card3)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+
+  <!-- Blog list header -->
+  <text x="36" y="46" font-family="sans-serif" font-size="8" font-weight="700" fill="rgba(255,255,255,0.8)" letter-spacing="0.5">LATEST POSTS</text>
+  <rect x="26" y="50" width="140" height="1" rx="1" fill="rgba(255,255,255,0.1)"/>
+
+  <!-- Post item 1 (active) -->
+  <rect x="26" y="54" width="140" height="38" rx="6" fill="rgba(52,211,153,0.18)"/>
+  <rect x="34" y="60" width="60" height="6" rx="3" fill="rgba(255,255,255,0.7)"/>
+  <rect x="34" y="70" width="100" height="4" rx="2" fill="rgba(255,255,255,0.3)"/>
+  <rect x="34" y="78" width="80" height="4" rx="2" fill="rgba(255,255,255,0.2)"/>
+  <rect x="114" y="58" width="40" height="12" rx="6" fill="rgba(52,211,153,0.35)"/>
+  <text x="134" y="67" font-family="sans-serif" font-size="6.5" fill="#6ee7b7" text-anchor="middle">React</text>
+
+  <!-- Post item 2 -->
+  <rect x="34" y="98" width="60" height="5" rx="2" fill="rgba(255,255,255,0.45)"/>
+  <rect x="34" y="107" width="95" height="4" rx="2" fill="rgba(255,255,255,0.2)"/>
+  <rect x="34" y="115" width="70" height="4" rx="2" fill="rgba(255,255,255,0.15)"/>
+  <rect x="26" y="95" width="140" height="1" rx="1" fill="rgba(255,255,255,0.08)"/>
+
+  <!-- Post item 3 -->
+  <rect x="34" y="128" width="70" height="5" rx="2" fill="rgba(255,255,255,0.35)"/>
+  <rect x="34" y="137" width="90" height="4" rx="2" fill="rgba(255,255,255,0.15)"/>
+  <rect x="34" y="145" width="65" height="4" rx="2" fill="rgba(255,255,255,0.12)"/>
+  <rect x="26" y="125" width="140" height="1" rx="1" fill="rgba(255,255,255,0.08)"/>
+
+  <!-- Write button -->
+  <rect x="34" y="158" width="118" height="10" rx="5" fill="rgba(52,211,153,0.3)" stroke="rgba(52,211,153,0.5)" stroke-width="1"/>
+  <text x="93" y="166" font-family="sans-serif" font-size="6.5" fill="#6ee7b7" text-anchor="middle">+ Write New Post</text>
+
+  <!-- Post detail card (right) -->
+  <rect x="182" y="28" width="156" height="144" rx="10" fill="url(#card3)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+
+  <!-- Post title -->
+  <rect x="192" y="38" width="50" height="10" rx="5" fill="rgba(52,211,153,0.3)"/>
+  <text x="217" y="46" font-family="sans-serif" font-size="6.5" fill="#6ee7b7" text-anchor="middle">MERN</text>
+  <rect x="192" y="52" width="120" height="7" rx="3" fill="rgba(255,255,255,0.7)"/>
+  <rect x="192" y="62" width="90" height="7" rx="3" fill="rgba(255,255,255,0.5)"/>
+
+  <!-- Author row -->
+  <circle cx="198" cy="78" r="6" fill="rgba(52,211,153,0.35)"/>
+  <text x="198" y="81" font-family="sans-serif" font-size="7" fill="#6ee7b7" text-anchor="middle">K</text>
+  <rect x="208" y="74" width="50" height="4" rx="2" fill="rgba(255,255,255,0.35)"/>
+  <rect x="208" y="81" width="35" height="3" rx="1" fill="rgba(255,255,255,0.2)"/>
+  <rect x="268" y="72" width="60" height="14" rx="7" fill="rgba(239,68,68,0.25)"/>
+  <text x="298" y="82" font-family="sans-serif" font-size="6.5" fill="#fca5a5" text-anchor="middle">✏ Edit</text>
+
+  <!-- Divider -->
+  <rect x="192" y="91" width="136" height="1" rx="1" fill="rgba(255,255,255,0.1)"/>
+
+  <!-- Content lines -->
+  <rect x="192" y="96" width="130" height="4" rx="2" fill="rgba(255,255,255,0.25)"/>
+  <rect x="192" y="104" width="125" height="4" rx="2" fill="rgba(255,255,255,0.2)"/>
+  <rect x="192" y="112" width="118" height="4" rx="2" fill="rgba(255,255,255,0.2)"/>
+  <rect x="192" y="120" width="130" height="4" rx="2" fill="rgba(255,255,255,0.15)"/>
+  <rect x="192" y="128" width="100" height="4" rx="2" fill="rgba(255,255,255,0.15)"/>
+  <rect x="192" y="136" width="115" height="4" rx="2" fill="rgba(255,255,255,0.12)"/>
+  <rect x="192" y="144" width="90" height="4" rx="2" fill="rgba(255,255,255,0.1)"/>
+
+  <!-- Like / comment row -->
+  <rect x="192" y="154" width="136" height="1" rx="1" fill="rgba(255,255,255,0.08)"/>
+  <text x="197" y="165" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.45)">♥ 24</text>
+  <text x="225" y="165" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.45)">💬 6</text>
+  <rect x="272" y="156" width="42" height="12" rx="6" fill="rgba(239,68,68,0.3)"/>
+  <text x="293" y="165" font-family="sans-serif" font-size="6.5" fill="#fca5a5" text-anchor="middle">🗑 Delete</text>
+
+  <!-- Title -->
+  <text x="180" y="20" font-family="sans-serif" font-size="9" font-weight="700" fill="rgba(255,255,255,0.7)" text-anchor="middle" letter-spacing="1">BLOG APPLICATION</text>
+</svg>
