@@ -1,42 +1,43 @@
-import React from 'react'
-import Marquee from 'react-fast-marquee'
-import { FaCss3Alt, FaGitAlt, FaHtml5, FaReact } from 'react-icons/fa'
-import { SiBootstrap, SiGithub, SiJavascript, SiMongodb, SiNodedotjs } from 'react-icons/si'
+import {
+  SiReact, SiNodedotjs, SiMongodb, SiExpress,
+  SiGit, SiGithub, SiHtml5, SiCss3, SiJavascript,
+} from "react-icons/si";
+
+const skills = [
+  { icon: <SiReact />, name: "ReactJS", color: "#61DAFB", bg: "#e8f8ff" },
+  { icon: <SiNodedotjs />, name: "Node.js", color: "#339933", bg: "#f0fff0" },
+  { icon: <SiMongodb />, name: "MongoDB", color: "#47A248", bg: "#f0fff4" },
+  { icon: <SiExpress />, name: "Express.js", color: "#000000", bg: "#f5f5f5" },
+  { icon: <SiJavascript />, name: "JavaScript", color: "#F7DF1E", bg: "#fffde7" },
+  { icon: <SiGit />, name: "Git", color: "#F05032", bg: "#fff3f0" },
+  { icon: <SiGithub />, name: "GitHub", color: "#181717", bg: "#f5f5f5" },
+  { icon: <SiHtml5 />, name: "HTML5", color: "#E34F26", bg: "#fff4f0" },
+  { icon: <SiCss3 />, name: "CSS3", color: "#1572B6", bg: "#f0f6ff" },
+];
 
 function Skills() {
-  const skills = [
-    { icon: <FaHtml5 size={50} style={{ color: '#e34c26' }} />, name: 'HTML' },
-    { icon: <FaCss3Alt size={50} style={{ color: '#1572B6' }} />, name: 'CSS' },
-    { icon: <SiBootstrap size={50} style={{ color: '#563d7c' }} />, name: 'Bootstrap' },
-    { icon: <SiJavascript size={50} style={{ color: '#f7df1e' }} />, name: 'JavaScript' },
-    { icon: <FaReact size={50} style={{ color: '#61DBFB' }} />, name: 'ReactJS' },
-    { icon: <SiNodedotjs size={50} style={{ color: '#68A063' }} />, name: 'Node.js' },
-    { icon: <SiMongodb size={50} style={{ color: '#4DB33D' }} />, name: 'MongoDB' },
-    { icon: <FaGitAlt size={40} style={{ color: '#F05032' }} />, name: 'Git' },
-    { icon: <SiGithub size={40} style={{ color: '#181717' }} />, name: 'GitHub' }
-  ];
-  
   return (
-    <section id='skills' className='skills'>
-      <div className='container my-5'>
-        <h2 className='skills-heading text-center mb-5'>Skills</h2>
-        <div className='skills-content'>
-          <Marquee speed={50}>
-            {skills.map((skill, index) => (
-              <div
-                key={index}
-                className='skill-item text-center mx-4'
-                style={{ width: '120px' }}
-              >
-                {skill.icon}
-                <p className='mt-2'>{skill.name}</p>
+    <section id="skills" className="skills-section">
+      <div className="container">
+        <div className="text-center mb-5">
+          <span className="section-eyebrow">What I Work With</span>
+          <h2 className="section-heading">Skills</h2>
+        </div>
+
+
+        <div className="row g-3 justify-content-center">
+          {skills.map((skill, i) => (
+            <div key={i} className="col-4 col-sm-3 col-md-2-4 col-lg-auto">
+              <div className="skill-card" style={{ "--skill-color": skill.color, "--skill-bg": skill.bg }}>
+                <span className="skill-icon">{skill.icon}</span>
+                <span className="skill-name">{skill.name}</span>
               </div>
-            ))}
-          </Marquee>
+            </div>
+          ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 export default Skills

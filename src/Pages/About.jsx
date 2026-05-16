@@ -1,41 +1,94 @@
 import React from 'react';
-import myImg from '../assets/IMG_1551 copy copy--.jpg'
+import myImg from '../assets/aboutme_pic.jpg'
+import RESUME_PDF from "../assets/Kumaresan_FSD.pdf";
+import { FaBriefcase, FaCode, FaDownload, FaGithub, FaLinkedin, FaRocket } from 'react-icons/fa';
 
-import { AiOutlineGithub } from 'react-icons/ai'
-import { CiLinkedin } from 'react-icons/ci'
-import { LuDownload } from 'react-icons/lu'
+
+
+
+const highlights = [
+    { icon: <FaCode />, label: "3+ Projects", sub: "Full-stack apps" },
+    { icon: <FaBriefcase />, label: "Mindtree Intern", sub: "React development(2022)" },
+    { icon: <FaRocket />, label: "Guvi certified", sub: "MERN stack certification" }
+];
 
 function About() {
     return (
-        <section id="about" className="about">
-            <div className="container my-5">
-                <div className="row align-items-center">
-                    <div className="col-md-6">
-                        <h2 className="section-title">About Me</h2>
-                        <p className="about-text">
-                            I am a skilled MERN stack developer with expertise in building modern web applications.
-                            My passion lies in creating responsive, dynamic, and user-centric web solutions.
-                        </p>
-                        <div className='social-icons' >
-                            <a href='https://github.com/kumaresh231299' target='_blank'>
-                                <AiOutlineGithub size={25} className="mx-2 text-black" />
-                            </a>
-                            {/* <CiLinkedin size={28} style={{color:"white"}}/> */}
-                            <a href='https://www.linkedin.com/in/kumaresan-subramani-0a09aa191?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bgn%2BLSUb8Syi1%2Fjk%2Fneyq9Q%3D%3D' target='_blank'>
-                                <CiLinkedin size={30} className="mx-2 text-blue" />
-                            </a>
-                            <a href='' download='resume'>
-                            <LuDownload size={20} className="mx-2 text-black
-                            " />
-                            </a>
+        <section id="about" className="about-section">
+            <div className="container">
+                <div className="row align-items-center g-5">
+
+                    {/* Photo side */}
+                    <div className="col-lg-5 text-center">
+                        <div className='about-photo-wrapper'>
+                            <img
+                                src={myImg}
+                                alt="Kumaresan"
+                                className="about-photo"
+                            />
+                            {/* Decorative accent block */}
+                            <div className='about-photo-accent' aria-hidden="true" />
                         </div>
                     </div>
-                    <div className="col-md-6 text-center">
-                        <img
-                            src={myImg}
-                            alt="Profile"
-                            className="about-img img-fluid rounded-circle"
-                        />
+
+
+                    {/* Content side */}
+                    <div className="col-lg-7">
+                        <span className='section-eyebrow'>Who I Am</span>
+                        <h2 className="section-heading">About Me</h2>
+
+                        <p className="about-bio">
+                            I'm a <strong>MERN stack developer</strong> who loves turning ideas into fast, clean web applications. My focus is on building responsive, user-centric experiences with React on the frontend and Nodejs + MongoDB on the backend.
+                        </p>
+                        <p className='about-bio'>
+                            I completed a <strong>React development apprenticeship at Mindtree</strong> and earned a <strong>MERN stack certification from GUVI</strong>. I'm currently looking for full-time or freelance opportunities where I can contribute to meaningful and keep growing as an engineer.
+                        </p>
+
+                        {/* Highlight cards */}
+                        <div className='about-highlights d-flex flex-wrap gap-3 mb-4'>
+                            {highlights.map((h, i) => (
+                                <div key={i} className='highlight-card'>
+                                    <span className='highlight-icon'>{h.icon}</span>
+                                    <div>
+                                        <div className='highlight-label'>{h.label}</div>
+                                        <div className='highlight-sub'>{h.sub}</div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Action row */}
+                        <div className='d-flex flex-wrap gap-3 align-items-center' >
+                            <a
+                                href={RESUME_PDF}
+                                download="Kumaresan_MERN-Resume.pdf"
+                                className='btn btn-primary-custom'
+                            >
+                                <FaDownload size={13} className="me-2" />
+                                Download Resume
+                            </a>
+
+                            <div className='d-flex gap-2'>
+                                <a
+                                    href="https://github.com/kumaresh231299"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="social-link"
+                                    aria-label="GitHub"
+                                >
+                                    <FaGithub size={18} />
+                                </a>
+                                <a
+                                    href="https://www.linkedin.com/in/kumaresan-subramani-0a09aa191/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="social-link"
+                                    aria-label="LinkedIn"
+                                >
+                                    <FaLinkedin size={18} />
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,33 +1,106 @@
 import React from 'react';
-import { FaBriefcase, FaCertificate } from 'react-icons/fa';
+import { FaBriefcase, FaCertificate, FaCheckCircle } from 'react-icons/fa';
+
+
+
+const experiences = [
+  {
+    type: "work",
+    icon: <FaBriefcase />,
+    iconColor: "#2563eb",
+    iconBg: "#dbeafe",
+    bulletColor: "#2563eb",
+    badgeBg: "#dbeafe",
+    badgeColor: "#2563eb",
+    title: "Apprenticeship - Mindtree",
+    period: "April 2022 - September 2022",
+    bullets: [
+      "Built reusable React components integrated into production-ready UI modules.",
+      "Gained hand-on experience with React hooks, state management and REST API integration.",
+      "Worked with Git workflow including branching, pull requests and code reviews.",
+      "Collaborated with cross-functional teams in an Agile sprint environment."
+    ]
+  },
+  {
+    type: "certification",
+    icon: <FaCertificate />,
+    iconColor: "#16a34a",
+    iconBg: "#dcfce7",
+    bulletColor: "#16a34a",
+    badgeBg: "#dcfce7",
+    badgeColor: "#16a34a",
+    title: "Certification - GUVI",
+    period: "MERN Stack Development",
+    bullets: [
+      "Completed intensive MERN stack bootcamp covering React, Node.js,Express,MongoDB and Bootstrap.",
+      "Built 3 Full-stck projects : Music Streamming App,Blog Application and Password Reset App",
+      "Mastered JWT authentication, RESTful API design and Nodemailer integration.",
+      "Learned deployment workflows using Netlify (frontend) and Render(backend)."
+    ]
+  }
+];
 
 function Experience() {
   return (
-    <section id="experience" className="experience py-5">
+    <section id="experience" className="experience-section">
       <div className="container">
-        <h2 className="text-center mb-4">Experience</h2>
-        <div className="row">
-          {/* Apprenticeship */}
-          <div className="col-lg-6 mb-4">
-            <div className="experience-card p-4 shadow-sm">
-              <div className="d-flex align-items-center mb-3">
-                <FaBriefcase size={30} className="text-primary me-3" />
-                <strong>Apprenticeship - Mindtree (April - Sept 2022)</strong>
-              </div>
-              <p>Completed training in React development, gaining hands-on experience with modern frontend technologies.</p>
-            </div>
-          </div>
+        <div className="text-center mb-5">
+          <span className='section-eyebrow'>My Journey</span>
+          <h2 className="section-heading">Experience</h2>
+        </div>
 
-          {/* Certification */}
-          <div className="col-lg-6 mb-4">
-            <div className="experience-card p-4 shadow-sm">
-              <div className="d-flex align-items-center mb-3">
-                <FaCertificate size={30} className="text-success me-3" />
-                <strong>Certification - GUVI</strong>
+        {/* Timeline layout */}
+        <div className='exp-wrapper'>
+          {experiences.map((exp, i) => (
+            <div key={i} className='exp-row'>
+
+              <div className='exp-left-col'>
+
+                {/* Top segment of the line (above dot) */}
+                <div className={`exp-line exp-line-top ${i === 0 ? "exp-line-invisible" : ""}`} />
+                {/* Timeline dot */}
+                <div
+                  className='exp-dot'
+                  style={{ background: exp.iconBg, color: exp.iconColor }}>
+                  {exp.icon}
+                </div>
+
+                {/* Bottom segment of the line (below dot) */}
+                <div className={`exp-line exp-line-bottom ${i === experiences.length - 1 ? "exp-line-invisible" : ""}`} />
               </div>
-              <p>Completed MERN stack development Certification, mastering skills in ReactJS, Node.js, MongoDB, and Express.js.</p>
+
+
+              {/* Card */}
+              <div className='exp-right-col'>
+                <div className='exp-card'>
+                  <div className='exp-card-header'>
+                    <div>
+                      <h3 className='exp-title'>{exp.title}</h3>
+                      <span className='exp-period'>{exp.period}</span>
+                    </div>
+                    <span
+                      className='exp-badge'
+                      style={{ background: exp.iconBg, color: exp.iconColor }}
+                    >
+                      {exp.type === "work" ? "work" : "Certification"}
+                    </span>
+                  </div>
+
+                  <ul className='exp-bullets'>
+                    {exp.bullets.map((b, j) => (
+                      <li key={j}>
+                        <FaCheckCircle
+                          className='bullet-icon'
+                          style={{ color: exp.bulletColor }}
+                        />
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

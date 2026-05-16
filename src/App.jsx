@@ -7,21 +7,23 @@ import Contact from './Pages/Contact'
 import Footer from './Components/Footer'
 import Skills from './Pages/Skills'
 import Experience from './Pages/Experience'
-import BackToTop from './Pages/BackToTop'
 
 function App() {
   return (
-    <div>
+    <>
       <Navbar />
-      <Home />
-      <About />
-      <Experience />
-      <Projects />
-      <Skills />
-      <Contact />
+
+      <main>
+        <Home />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Contact />
+      </main>
+
       <Footer />
-      <BackToTop />
-    </div>
+    </>
   )
 }
 
